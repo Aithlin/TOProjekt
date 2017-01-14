@@ -12,8 +12,8 @@ namespace TOProjekt
         {
             ustawDane();
 
-            Rejestracja.telefon("Dupencjusz", "Pierdzioch");
-            Rejestracja.telefon("Dupencjusz", "Robak");
+            Rejestracja.telefon("Dupencjusz", "Pierdzioch", "Pulmunolog");
+            Rejestracja.telefon("Dupencjusz", "Robak", "Kardiolog");
         }
 
         static private void ustawDane()
@@ -22,7 +22,7 @@ namespace TOProjekt
             Kartoteka.getInstance().pacjenci.Add(new Pacjent("Dupencjusz", "Robak"));
 
             //---------------------LEKARZE------------------------
-            Kartoteka.getInstance().lekarze.Add(new Pulmunolog("Ronald", "Marek"));
+            Kartoteka.getInstance().pulmunolodzy.Add(new Pulmunolog("Ronald", "Marek"));
         }
     }
 }

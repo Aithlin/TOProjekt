@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Człowiek.cs" />
     <Compile Include="Dermatolog.cs" />
+    <Compile Include="ELekarz.cs" />
     <Compile Include="Kardiolog.cs" />
     <Compile Include="Kartoteka.cs" />
     <Compile Include="Laryngolog.cs" />
