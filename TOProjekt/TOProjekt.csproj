@@ -46,6 +46,7 @@
     <Compile Include="Człowiek.cs" />
     <Compile Include="Dermatolog.cs" />
     <Compile Include="Kardiolog.cs" />
+    <Compile Include="Kartoteka.cs" />
     <Compile Include="Laryngolog.cs" />
     <Compile Include="Lekarz.cs" />
     <Compile Include="Okulista.cs" />
