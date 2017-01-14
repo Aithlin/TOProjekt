@@ -8,6 +8,9 @@ namespace TOProjekt
 {
     class Laryngolog:Lekarz
     {
+        public Laryngolog(string imie, string nazwisko) : base(imie,nazwisko)
+        {
+        }
         public override void badaj(Pacjent pacjent)
         {
             Console.WriteLine("Laryngolog bada ucho.");

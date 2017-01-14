@@ -8,6 +8,9 @@ namespace TOProjekt
 {
     class Kardiolog:Lekarz
     {
+        public Kardiolog(string imie, string nazwisko) : base(imie,nazwisko)
+        {
+        }
         public override void badaj(Pacjent pacjent)
         {
             Console.WriteLine("Kardiolog bada serce.");
