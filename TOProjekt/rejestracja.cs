@@ -23,6 +23,12 @@ namespace TOProjekt
             }
 
             System.Console.WriteLine("Obsluguje pacjenta: " + pacjent.ToString());
+
+            //obsluga lekarza
+            Lekarz lekarz = Kartoteka.getInstance().lekarze.FirstOrDefault();
+
+
+            System.Console.WriteLine("Obsluguje lekarza: " + lekarz.ToString());
         }
         public static Wizyta zarejestruj(Pacjent pacjent,Lekarz lekarz, DateTime godzina)
         {
