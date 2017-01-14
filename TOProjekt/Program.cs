@@ -10,10 +10,19 @@ namespace TOProjekt
     {
         static void Main(string[] args)
         {
-            Kartoteka.getInstance().pacjenci.Add(new Pacjent("Dupencjusz", "Robak"));
+            ustawDane();
 
             Rejestracja.telefon("Dupencjusz", "Pierdzioch");
             Rejestracja.telefon("Dupencjusz", "Robak");
+        }
+
+        static private void ustawDane()
+        {
+            //---------------------PACJENCI-----------------------
+            Kartoteka.getInstance().pacjenci.Add(new Pacjent("Dupencjusz", "Robak"));
+
+            //---------------------LEKARZE------------------------
+            Kartoteka.getInstance().lekarze.Add(new Pulmunolog("Ronald", "Marek"));
         }
     }
 }
