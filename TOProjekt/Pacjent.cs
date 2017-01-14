@@ -8,6 +8,10 @@ namespace TOProjekt
 {
     public class Pacjent:Człowiek
     {
+        public Pacjent(string imie, string nazwisko) : base(imie,nazwisko)
+        {
+        }
+
         public void podaniedanych()
         {
             Console.WriteLine("Pacjent sie przedstawia.");
