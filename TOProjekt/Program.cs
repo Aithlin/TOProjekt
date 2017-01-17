@@ -32,37 +32,37 @@ namespace TOProjekt
             Kartoteka.getInstance().pacjenci.Add(new Pacjent("Dupencjusz", "Robak"));
 
             //---------------------LEKARZE------------------------
-            Kartoteka.getInstance().dermatolodzy.Add(new Dermatolog("Alfred", "Zieba"));
-            Kartoteka.getInstance().kardiolodzy.Add(new Kardiolog("Henryk", "Zajac"));
-            Kartoteka.getInstance().laryngolodzy.Add(new Laryngolog("Rufus", "Mysior"));
-            Kartoteka.getInstance().okulisci.Add(new Okulista("Bohdan", "Fredzel"));
-            Kartoteka.getInstance().pulmunolodzy.Add(new Pulmunolog("Ronald", "Marek"));
+            Kartoteka.getInstance().lekarze.Add(new Dermatolog("Alfred", "Zieba"));
+            Kartoteka.getInstance().lekarze.Add(new Kardiolog("Henryk", "Zajac"));
+            Kartoteka.getInstance().lekarze.Add(new Laryngolog("Rufus", "Mysior"));
+            Kartoteka.getInstance().lekarze.Add(new Okulista("Bohdan", "Fredzel"));
+            Kartoteka.getInstance().lekarze.Add(new Pulmunolog("Ronald", "Marek"));
         }
 
         static private void sprawdzDane()
         {
             //---------------------LEKARZE------------------------
-            if (Kartoteka.getInstance().dermatolodzy.Count() < 1)
+            if (Kartoteka.getInstance().lekarze.Where(x => x.GetType().Equals(typeof(Dermatolog))).Count() < 1)
             {
                 System.Console.WriteLine("Nie został stworzony żaden dermatolog");
                 throw new Exception();
             }
-            if (Kartoteka.getInstance().kardiolodzy.Count() < 1)
+            if (Kartoteka.getInstance().lekarze.Where(x => x.GetType().Equals(typeof(Kardiolog))).Count() < 1)
             {
                 System.Console.WriteLine("Nie został stworzony żaden kardiolog");
                 throw new Exception();
             }
-            if (Kartoteka.getInstance().laryngolodzy.Count() < 1)
+            if (Kartoteka.getInstance().lekarze.Where(x => x.GetType().Equals(typeof(Laryngolog))).Count() < 1)
             {
                 System.Console.WriteLine("Nie został stworzony żaden laryngolog");
                 throw new Exception();
             }
-            if (Kartoteka.getInstance().okulisci.Count() < 1)
+            if (Kartoteka.getInstance().lekarze.Where(x => x.GetType().Equals(typeof(Okulista))).Count() < 1)
             {
                 System.Console.WriteLine("Nie został stworzony żaden okulista");
                 throw new Exception();
             }
-            if (Kartoteka.getInstance().pulmunolodzy.Count() < 1)
+            if (Kartoteka.getInstance().lekarze.Where(x => x.GetType().Equals(typeof(Pulmunolog))).Count() < 1)
             {
                 System.Console.WriteLine("Nie został stworzony żaden pulmunolog");
                 throw new Exception();

@@ -19,5 +19,7 @@ namespace TOProjekt
         {
             Console.WriteLine("Koniec wizyty.");
         }
+
+
     }
 }
