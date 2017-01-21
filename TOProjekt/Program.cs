@@ -24,6 +24,9 @@ namespace TOProjekt
 
             Rejestracja.telefon("Dupencjusz", "Pierdzioch", "Pulmunolog");
             Rejestracja.telefon("Dupencjusz", "Robak", "Kardiolog");
+            Rejestracja.telefon("Dupencjusz", "Robak", "Dermatolog");
+            Rejestracja.telefon("Dupencjusz", "Robak", "Okulista");
+            Rejestracja.telefon("Dupencjusz", "Robak", "Laryngolog");
         }
 
         static private void ustawDane()

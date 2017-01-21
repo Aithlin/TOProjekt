@@ -25,5 +25,13 @@ namespace TOProjekt
             lekarz.badaj(pacjent);
             lekarz.zakonczwizyte();
         }
+
+        public String ToString()
+        {
+            return
+                "Pacjent: " + pacjent.ToString() + " " +
+                "Lekarz: " + lekarz.ToString() + " " +
+                "Data: " + godzina.ToString() + " ";
+        }
     }
 }

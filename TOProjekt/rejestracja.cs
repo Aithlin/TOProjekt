@@ -24,7 +24,7 @@ namespace TOProjekt
 
             System.Console.WriteLine("Obsluguje pacjenta: " + pacjent.ToString());
 
-            //
+
             Lekarz lekarz = ZwrocKolekcjeLekarzy(ZwrocELekarza(nazwalekarza)).FirstOrDefault();
             if(lekarz == null)
             {
@@ -35,13 +35,20 @@ namespace TOProjekt
             {
                 System.Console.WriteLine("Obsluguje lekarza: " + lekarz.ToString());
             }
-            
+
+
+            Wizyta wizyta = new Wizyta(pacjent, lekarz, DateTime.Now.AddDays(1));
+
+            System.Console.WriteLine("Przygotowana wizyta: " + wizyta.ToString());
         }
+
+        /*
         public static Wizyta zarejestruj(Pacjent pacjent,Lekarz lekarz, DateTime godzina)
         {
             Wizyta wizyta1 = new Wizyta(pacjent, lekarz, godzina);
             return wizyta1;
         }
+        */
 
         private static HashSet<Lekarz> ZwrocKolekcjeLekarzy(ELekarz elekarz)
         {
