@@ -9,25 +9,19 @@ namespace TOProjekt
     class Kartoteka
     {
         public HashSet<Pacjent> pacjenci = new HashSet<Pacjent>();
-        // zrob lista list
-        public HashSet<Lekarz> lekarze = new HashSet<Lekarz>();
-        
-        
 
-
-        //public HashSet<Lekarz> dermatolodzy = new HashSet<Lekarz>();
-        //public HashSet<Lekarz> kardiolodzy = new HashSet<Lekarz>();
-        //public HashSet<Lekarz> laryngolodzy = new HashSet<Lekarz>();
-        //public HashSet<Lekarz> okulisci = new HashSet<Lekarz>();
-        //public HashSet<Lekarz> pulmunolodzy = new HashSet<Lekarz>();
+        public HashSet<Lekarz> dermatolodzy = new HashSet<Lekarz>();
+        public HashSet<Lekarz> kardiolodzy = new HashSet<Lekarz>();
+        public HashSet<Lekarz> laryngolodzy = new HashSet<Lekarz>();
+        public HashSet<Lekarz> okulisci = new HashSet<Lekarz>();
+        public HashSet<Lekarz> pulmunolodzy = new HashSet<Lekarz>();
 
         public HashSet<Wizyta> wizyty = new HashSet<Wizyta>();
 
 
         private static Kartoteka kartoteka;
 
-        private Kartoteka() { 
-        }
+        private Kartoteka() { }
 
         public static Kartoteka getInstance()
         {
