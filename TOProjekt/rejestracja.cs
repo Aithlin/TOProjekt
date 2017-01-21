@@ -40,6 +40,8 @@ namespace TOProjekt
             Wizyta wizyta = new Wizyta(pacjent, lekarz, DateTime.Now.AddDays(1));
 
             System.Console.WriteLine("Przygotowana wizyta: " + wizyta.ToString());
+
+            Kartoteka.getInstance().wizyty.Add(wizyta);
         }
 
         /*
