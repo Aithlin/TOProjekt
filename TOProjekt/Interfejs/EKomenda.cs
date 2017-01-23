@@ -10,5 +10,6 @@ namespace TOProjekt.Interfejs
     {
         EXIT,
         PRZYKLAD,
+        REJESTRACJA,
     }
 }

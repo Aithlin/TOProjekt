@@ -11,7 +11,7 @@ namespace TOProjekt.Interfejs
     {
        public static IKomenda parsuj(string napis)
        {
-           List<string> polecenie = new List<string>( napis.Split());
+           List<string> polecenie = new List<string>(napis.Split());
            EKomenda ekomenda;
 
            if (Enum.TryParse<EKomenda>(polecenie.FirstOrDefault().ToUpper(), out ekomenda) == false) //lepszy bo nie trzeba robic wyjatkow
@@ -23,6 +23,7 @@ namespace TOProjekt.Interfejs
            {
                case EKomenda.EXIT: return new ExitK();
                case EKomenda.PRZYKLAD: return new PrzykladK();
+               case EKomenda.REJESTRACJA: return new RejestracjaK(polecenie.ElementAtOrDefault(1), polecenie.ElementAtOrDefault(2), polecenie.ElementAtOrDefault(3));
                default: return new PrzykladK();
            }
        }
