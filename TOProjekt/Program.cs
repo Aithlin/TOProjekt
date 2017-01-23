@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TOProjekt.Interfejs;
 
 namespace TOProjekt
 {
@@ -22,11 +23,29 @@ namespace TOProjekt
 
             sprawdzDane();
 
-            Rejestracja.telefon("Dupencjusz", "Pierdzioch", "Pulmunolog");
-            Rejestracja.telefon("Dupencjusz", "Robak", "Kardiolog");
-            Rejestracja.telefon("Dupencjusz", "Robak", "Dermatolog");
-            Rejestracja.telefon("Dupencjusz", "Robak", "Okulista");
-            Rejestracja.telefon("Dupencjusz", "Robak", "Laryngolog");
+            //Rejestracja.telefon("Dupencjusz", "Pierdzioch", "Pulmunolog");
+            //Rejestracja.telefon("Dupencjusz", "Robak", "Kardiolog");
+            //Rejestracja.telefon("Dupencjusz", "Robak", "Dermatolog");
+            //Rejestracja.telefon("Dupencjusz", "Robak", "Okulista");
+            //Rejestracja.telefon("Dupencjusz", "Robak", "Laryngolog");
+
+
+            bool exit = false;
+		    String napis;
+	        while(exit == false)
+	        {
+	    	    Console.WriteLine("Wpisz komende (help zeby uzyskac pomoc x_x): "); 
+	    	    try 
+	    	    {
+				    napis = Console.ReadLine();
+                    IKomenda komenda = Parser.parsuj(napis);
+                    exit = komenda.wykonaj();
+			    } 
+	    	    catch (Exception) 
+	    	    {
+				    Console.WriteLine("Error w czytaniu komendy");
+			    }
+	        }
         }
 
         static private void ustawDane()
