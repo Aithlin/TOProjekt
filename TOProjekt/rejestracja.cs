@@ -52,7 +52,7 @@ namespace TOProjekt
         }
         */
 
-        private static HashSet<Lekarz> ZwrocKolekcjeLekarzy(ELekarz elekarz)
+        private static IEnumerable<Lekarz> ZwrocKolekcjeLekarzy(ELekarz elekarz)
         {
             switch(elekarz)
             {

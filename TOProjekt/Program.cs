@@ -35,11 +35,11 @@ namespace TOProjekt
             Kartoteka.getInstance().pacjenci.Add(new Pacjent("Dupencjusz", "Robak"));
 
             //---------------------LEKARZE------------------------
-            Kartoteka.getInstance().dermatolodzy.Add(new Dermatolog("Alfred", "Zieba"));
-            Kartoteka.getInstance().kardiolodzy.Add(new Kardiolog("Henryk", "Zajac"));
-            Kartoteka.getInstance().laryngolodzy.Add(new Laryngolog("Rufus", "Mysior"));
-            Kartoteka.getInstance().okulisci.Add(new Okulista("Bohdan", "Fredzel"));
-            Kartoteka.getInstance().pulmunolodzy.Add(new Pulmunolog("Ronald", "Marek"));
+            Kartoteka.getInstance().lekarze.Add(new Dermatolog("Alfred", "Zieba"));
+            Kartoteka.getInstance().lekarze.Add(new Kardiolog("Henryk", "Zajac"));
+            Kartoteka.getInstance().lekarze.Add(new Laryngolog("Rufus", "Mysior"));
+            Kartoteka.getInstance().lekarze.Add(new Okulista("Bohdan", "Fredzel"));
+            Kartoteka.getInstance().lekarze.Add(new Pulmunolog("Ronald", "Marek"));
         }
 
         static private void sprawdzDane()

@@ -10,11 +10,14 @@ namespace TOProjekt
     {
         public HashSet<Pacjent> pacjenci = new HashSet<Pacjent>();
 
-        public HashSet<Lekarz> dermatolodzy = new HashSet<Lekarz>();
-        public HashSet<Lekarz> kardiolodzy = new HashSet<Lekarz>();
-        public HashSet<Lekarz> laryngolodzy = new HashSet<Lekarz>();
-        public HashSet<Lekarz> okulisci = new HashSet<Lekarz>();
-        public HashSet<Lekarz> pulmunolodzy = new HashSet<Lekarz>();
+        public IEnumerable<Lekarz> dermatolodzy { get { return lekarze.OfType<Dermatolog>(); } } // definiuje get dla dermatologow, wyciagam ich z wszystkich lekarzy
+        public IEnumerable<Lekarz> kardiolodzy { get { return lekarze.OfType<Kardiolog>(); } }
+        public IEnumerable<Lekarz> laryngolodzy { get { return lekarze.OfType<Laryngolog>(); } }
+        public IEnumerable<Lekarz> okulisci { get { return lekarze.OfType<Okulista>(); } }
+        public IEnumerable<Lekarz> pulmunolodzy { get { return lekarze.OfType<Pulmunolog>(); } }
+
+        public HashSet<Lekarz> lekarze = new HashSet<Lekarz>(); 
+
 
         public HashSet<Wizyta> wizyty = new HashSet<Wizyta>();
 
