@@ -17,24 +17,21 @@ namespace TOProjekt
         public IEnumerable<Lekarz> pulmunolodzy { get { return lekarze.OfType<Pulmunolog>(); } }
 
         public HashSet<Lekarz> lekarze = new HashSet<Lekarz>(); 
-
-
         public HashSet<Wizyta> wizyty = new HashSet<Wizyta>();
 
-
         private static Kartoteka kartoteka;
-
-        private Kartoteka() { }
-
-        public static Kartoteka getInstance()
+        public static Kartoteka Instance
         {
-            if(kartoteka == null)
+            get
             {
-                kartoteka = new Kartoteka();
+                if (kartoteka == null)
+                {
+                    kartoteka = new Kartoteka();
+                }
+
+                return kartoteka;
             }
-
-            return kartoteka;
         }
-
+        private Kartoteka() { }
     }
 }

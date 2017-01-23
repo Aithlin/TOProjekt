@@ -10,12 +10,14 @@ namespace TOProjekt
     {
         public static void telefon(string imie, string nazwisko,string nazwalekarza)
         {
-            Pacjent pacjent = Kartoteka.getInstance().pacjenci.Where(x => x.Equals(imie, nazwisko)).FirstOrDefault();
+            Kartoteka kartoteka = Kartoteka.Instance;
+
+            Pacjent pacjent = kartoteka.pacjenci.Where(x => x.Equals(imie, nazwisko)).FirstOrDefault();
             if(pacjent == null)
             {
                 System.Console.WriteLine("Nie znaleziony: " + imie + " " + nazwisko);
                 pacjent = new Pacjent(imie, nazwisko);
-                Kartoteka.getInstance().pacjenci.Add(pacjent);
+                kartoteka.pacjenci.Add(pacjent);
             }
             else
             {
@@ -41,7 +43,7 @@ namespace TOProjekt
 
             System.Console.WriteLine("Przygotowana wizyta: " + wizyta.ToString());
 
-            Kartoteka.getInstance().wizyty.Add(wizyta);
+            kartoteka.wizyty.Add(wizyta);
         }
 
         /*
@@ -57,15 +59,15 @@ namespace TOProjekt
             switch(elekarz)
             {
                 case ELekarz.DERMATOLOG:
-                    return Kartoteka.getInstance().dermatolodzy;
+                    return Kartoteka.Instance.dermatolodzy;
                 case ELekarz.KARDIOLOG:
-                    return Kartoteka.getInstance().kardiolodzy;
+                    return Kartoteka.Instance.kardiolodzy;
                 case ELekarz.LARYNGOLOG:
-                    return Kartoteka.getInstance().laryngolodzy;
+                    return Kartoteka.Instance.laryngolodzy;
                 case ELekarz.OKULISTA:
-                    return Kartoteka.getInstance().okulisci;
+                    return Kartoteka.Instance.okulisci;
                 case ELekarz.PULMUNOLOG:
-                    return Kartoteka.getInstance().pulmunolodzy;
+                    return Kartoteka.Instance.pulmunolodzy;
                 default:
                     throw new NotImplementedException();
             }
