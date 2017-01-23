@@ -26,7 +26,7 @@ namespace TOProjekt
             lekarz.zakonczwizyte();
         }
 
-        public String ToString()
+        public override String ToString()
         {
             return
                 "Pacjent: " + pacjent.ToString() + " " +
