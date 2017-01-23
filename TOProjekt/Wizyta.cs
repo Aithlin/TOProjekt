@@ -19,13 +19,6 @@ namespace TOProjekt
             this.godzina = godzina;
         }
 
-        void badanie()
-        {
-            pacjent.podaniedanych();
-            lekarz.badaj(pacjent);
-            lekarz.zakonczwizyte();
-        }
-
         public override String ToString()
         {
             return

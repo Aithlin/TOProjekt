@@ -16,5 +16,9 @@ namespace TOProjekt
         {
             Console.WriteLine("Pulmunolog bada płuca.");
         }
+        public override ELekarz typ()
+        {
+            return ELekarz.PULMUNOLOG;
+        }
     }
 }

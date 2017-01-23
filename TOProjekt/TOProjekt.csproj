@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Człowiek.cs" />
+    <Compile Include="Czlowiek.cs" />
     <Compile Include="Dermatolog.cs" />
     <Compile Include="ELekarz.cs" />
     <Compile Include="Interfejs\EKomenda.cs" />
@@ -51,6 +51,7 @@
     <Compile Include="Interfejs\Komendy\ExitK.cs" />
     <Compile Include="Interfejs\Komendy\PrzykladK.cs" />
     <Compile Include="Interfejs\Komendy\RejestracjaK.cs" />
+    <Compile Include="Interfejs\Komendy\WizytaK.cs" />
     <Compile Include="Interfejs\Parser.cs" />
     <Compile Include="Kardiolog.cs" />
     <Compile Include="Kartoteka.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Pacjent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Przychodnia.cs" />
     <Compile Include="Pulmunolog.cs" />
     <Compile Include="Rejestracja.cs" />
     <Compile Include="Wizyta.cs" />

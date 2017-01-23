@@ -39,7 +39,7 @@ namespace TOProjekt
             }
 
 
-            Wizyta wizyta = new Wizyta(pacjent, lekarz, DateTime.Now.AddDays(1));
+            Wizyta wizyta = new Wizyta(pacjent, lekarz, DateTime.Now.AddDays(0));
 
             System.Console.WriteLine("Przygotowana wizyta: " + wizyta.ToString());
 
@@ -75,15 +75,14 @@ namespace TOProjekt
 
         private static ELekarz ZwrocELekarza(string elekarzstring)
         {
-            try
+            ELekarz elekarz;
+
+            if (Enum.TryParse<ELekarz>(elekarzstring.ToUpper(), out elekarz) == false) //lepszy bo nie trzeba robic wyjatkow
             {
-                return (ELekarz)Enum.Parse(typeof(ELekarz), elekarzstring, true);
-            }
-            catch (ArgumentException)
-            {
-                //return ELekarz.PIERWSZYKONTAKT;
                 throw new NotImplementedException();
             }
+
+            return elekarz;
         }
 
 

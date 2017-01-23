@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TOProjekt
 {
-    public class Pacjent:Człowiek
+    public class Pacjent:Czlowiek
     {
         public Pacjent(string imie, string nazwisko) : base(imie,nazwisko)
         {
@@ -14,7 +14,7 @@ namespace TOProjekt
 
         public void podaniedanych()
         {
-            Console.WriteLine("Pacjent sie przedstawia.");
+            Console.WriteLine("Jestem: "+ imie + " " + nazwisko);
         }
 
     }

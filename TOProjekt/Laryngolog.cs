@@ -15,5 +15,9 @@ namespace TOProjekt
         {
             Console.WriteLine("Laryngolog bada ucho.");
         }
+        public override ELekarz typ()
+        {
+            return ELekarz.LARYNGOLOG;
+        }
     }
 }

@@ -24,6 +24,7 @@ namespace TOProjekt.Interfejs
                case EKomenda.EXIT: return new ExitK();
                case EKomenda.PRZYKLAD: return new PrzykladK();
                case EKomenda.REJESTRACJA: return new RejestracjaK(polecenie.ElementAtOrDefault(1), polecenie.ElementAtOrDefault(2), polecenie.ElementAtOrDefault(3));
+               case EKomenda.WIZYTA: return new WizytaK(polecenie.ElementAtOrDefault(1), polecenie.ElementAtOrDefault(2), polecenie.ElementAtOrDefault(3));
                default: return new PrzykladK();
            }
        }

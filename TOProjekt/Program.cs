@@ -16,7 +16,7 @@ namespace TOProjekt
             {
                 sprawdzDane();
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 System.Environment.Exit(1);
             }

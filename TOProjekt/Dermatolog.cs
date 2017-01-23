@@ -15,5 +15,9 @@ namespace TOProjekt
         {
             Console.WriteLine("Dermatolog bada skore.");
         }
+        public override ELekarz typ()
+        {
+            return ELekarz.DERMATOLOG;
+        }
     }
 }

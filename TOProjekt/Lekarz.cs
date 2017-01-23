@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TOProjekt
 {
-    public abstract class Lekarz:Człowiek
+    public abstract class Lekarz:Czlowiek
     {
         public Lekarz()
         {
@@ -15,9 +15,13 @@ namespace TOProjekt
         {
         }
         public abstract void badaj(Pacjent pacjent);
-        public void zakonczwizyte()
+
+        public void uzupelnijkartepacjenta(Pacjent pacjent)
         {
-            Console.WriteLine("Koniec wizyty.");
+            Console.WriteLine("Wpisuje objawy pacjenta i ewentualne rozpoznanie choroby");
         }
+
+
+        public abstract ELekarz typ();
     }
 }

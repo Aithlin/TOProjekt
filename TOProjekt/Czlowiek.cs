@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace TOProjekt
 {
-    public class Człowiek
+    public class Czlowiek
     {
         public string imie;
         public string nazwisko;
         public string telefon;
 
-        public Człowiek()
+        public Czlowiek()
         {
 
         }
 
-        public Człowiek(string imie, string nazwisko)
+        public Czlowiek(string imie, string nazwisko)
         {
             this.imie = imie;
             this.nazwisko = nazwisko;
@@ -27,7 +27,7 @@ namespace TOProjekt
 
         public override bool Equals(Object obj)
         {
-            Człowiek człowiek = obj as Człowiek;
+            Czlowiek człowiek = obj as Czlowiek;
             if (człowiek == null)
                 return false;
 

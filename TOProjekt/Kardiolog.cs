@@ -15,5 +15,9 @@ namespace TOProjekt
         {
             Console.WriteLine("Kardiolog bada serce.");
         }
+        public override ELekarz typ()
+        {
+            return ELekarz.KARDIOLOG;
+        }
     }
 }

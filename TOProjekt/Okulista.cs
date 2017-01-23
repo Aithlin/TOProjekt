@@ -15,5 +15,9 @@ namespace TOProjekt
         {
             Console.WriteLine("Okulista bada oko.");
         }
+        public override ELekarz typ()
+        {
+            return ELekarz.OKULISTA;
+        }
     }
 }
