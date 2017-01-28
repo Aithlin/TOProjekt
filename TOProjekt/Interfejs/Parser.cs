@@ -11,22 +11,16 @@ namespace TOProjekt.Interfejs
     {
        public static IKomenda parsuj(string napis)
        {
+            // zamiana napisu na polecenie (trzymane w tablicy)
            List<string> polecenie = new List<string>(napis.Split());
            EKomenda ekomenda;
 
            if (Enum.TryParse<EKomenda>(polecenie.FirstOrDefault().ToUpper(), out ekomenda) == false) //lepszy bo nie trzeba robic wyjatkow
            {
-               return new PrzykladK();
+                ekomenda = EKomenda.NONE;
            }
 
-           switch (ekomenda)
-           {
-               case EKomenda.EXIT: return new ExitK();
-               case EKomenda.PRZYKLAD: return new PrzykladK();
-               case EKomenda.REJESTRACJA: return new RejestracjaK(polecenie);
-               case EKomenda.WIZYTA: return new WizytaK(polecenie.ElementAtOrDefault(1), polecenie.ElementAtOrDefault(2), polecenie.ElementAtOrDefault(3));
-               default: return new PrzykladK();
-           }
+           return FabrykaKomendy.StworzKomende(ekomenda, polecenie);
        }
     }
 }

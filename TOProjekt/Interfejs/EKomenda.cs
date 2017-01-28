@@ -8,6 +8,7 @@ namespace TOProjekt.Interfejs
 {
     public enum EKomenda
     {
+        NONE,
         EXIT,
         PRZYKLAD,
         REJESTRACJA,

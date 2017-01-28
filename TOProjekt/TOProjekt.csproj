@@ -47,6 +47,7 @@
     <Compile Include="Dermatolog.cs" />
     <Compile Include="ELekarz.cs" />
     <Compile Include="Interfejs\EKomenda.cs" />
+    <Compile Include="Interfejs\FabrykaKomendy.cs" />
     <Compile Include="Interfejs\IKomenda.cs" />
     <Compile Include="Interfejs\Komendy\ExitK.cs" />
     <Compile Include="Interfejs\Komendy\PrzykladK.cs" />
