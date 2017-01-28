@@ -31,7 +31,7 @@ namespace TOProjekt
             if(lekarz == null)
             {
                 System.Console.WriteLine("Brak danego lekarza");
-                //throw new NotImplementedException();
+                return;
             }
             else
             {
@@ -41,18 +41,11 @@ namespace TOProjekt
 
             Wizyta wizyta = new Wizyta(pacjent, lekarz, DateTime.Now.AddDays(0));
 
+            kartoteka.wizyty.Add(wizyta);
             System.Console.WriteLine("Przygotowana wizyta: " + wizyta.ToString());
 
-            kartoteka.wizyty.Add(wizyta);
+            
         }
-
-        /*
-        public static Wizyta zarejestruj(Pacjent pacjent,Lekarz lekarz, DateTime godzina)
-        {
-            Wizyta wizyta1 = new Wizyta(pacjent, lekarz, godzina);
-            return wizyta1;
-        }
-        */
 
         private static IEnumerable<Lekarz> ZwrocKolekcjeLekarzy(ELekarz elekarz)
         {
@@ -69,7 +62,7 @@ namespace TOProjekt
                 case ELekarz.PULMUNOLOG:
                     return Kartoteka.Instance.pulmunolodzy;
                 default:
-                    throw new NotImplementedException();
+                    return new List<Lekarz>();
             }
         }
 
@@ -79,7 +72,7 @@ namespace TOProjekt
 
             if (Enum.TryParse<ELekarz>(elekarzstring.ToUpper(), out elekarz) == false) //lepszy bo nie trzeba robic wyjatkow
             {
-                throw new NotImplementedException();
+                return ELekarz.NONE;
             }
 
             return elekarz;

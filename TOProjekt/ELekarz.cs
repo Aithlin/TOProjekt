@@ -8,6 +8,7 @@ namespace TOProjekt
 {
     public enum ELekarz
     {
+        NONE,
         DERMATOLOG,
         KARDIOLOG,
         LARYNGOLOG,
