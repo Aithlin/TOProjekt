@@ -41,11 +41,15 @@ namespace TOProjekt
                     IKomenda komenda = Parser.parsuj(napis);
                     exit = komenda.wykonaj();
 			    } 
-	    	    catch (Exception) 
+	    	    catch (NotImplementedException e) 
 	    	    {
-				    Console.WriteLine("Error w czytaniu komendy");
+				    Console.WriteLine("Funkcjonalnosc niezaimplementowana" + e.ToString());
 			    }
-	        }
+                catch (Exception)
+                {
+                    Console.WriteLine("Error w czytaniu komendy");
+                }
+            }
         }
 
         static private void ustawDane()
