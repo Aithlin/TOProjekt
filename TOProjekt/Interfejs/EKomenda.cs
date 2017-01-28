@@ -10,7 +10,7 @@ namespace TOProjekt.Interfejs
     {
         NONE,
         EXIT,
-        PRZYKLAD,
+        HELP,
         REJESTRACJA,
         WIZYTA,
     }

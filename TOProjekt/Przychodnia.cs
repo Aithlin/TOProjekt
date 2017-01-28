@@ -41,7 +41,7 @@ namespace TOProjekt
 
             if (Enum.TryParse<ELekarz>(elekarzstring.ToUpper(), out elekarz) == false) //lepszy bo nie trzeba robic wyjatkow
             {
-                throw new NotImplementedException();
+                return ELekarz.NONE;
             }
 
             return elekarz;

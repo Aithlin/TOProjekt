@@ -37,8 +37,14 @@ namespace TOProjekt
             {
                 System.Console.WriteLine("Obsluguje lekarza: " + lekarz.ToString());
             }
+            /*
+            wizytaTmp = WizytaFabryka.TworzWizyte();
+            wizytaTmp.SetPacjent(pacjent);
+            wizytaTmp.SetLekarz(lekarz);
+            wizytaTmp.SetDate(DateTime.Now);
 
-
+            Wizyta wizyta = wizytaTmp.Buduj();
+            */
             Wizyta wizyta = new Wizyta(pacjent, lekarz, DateTime.Now.AddDays(0));
 
             kartoteka.wizyty.Add(wizyta);

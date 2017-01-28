@@ -50,7 +50,8 @@
     <Compile Include="Interfejs\FabrykaKomendy.cs" />
     <Compile Include="Interfejs\IKomenda.cs" />
     <Compile Include="Interfejs\Komendy\ExitK.cs" />
-    <Compile Include="Interfejs\Komendy\PrzykladK.cs" />
+    <Compile Include="Interfejs\Komendy\HelpK.cs" />
+    <Compile Include="Interfejs\Komendy\NicNieRobK.cs" />
     <Compile Include="Interfejs\Komendy\RejestracjaK.cs" />
     <Compile Include="Interfejs\Komendy\WizytaK.cs" />
     <Compile Include="Interfejs\Parser.cs" />
