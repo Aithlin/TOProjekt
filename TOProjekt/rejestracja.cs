@@ -8,12 +8,12 @@ namespace TOProjekt
 {
     class Rejestracja
     {
-        public static void telefon(string imie, string nazwisko,string nazwalekarza)
+        public static void telefon(string imie, string nazwisko, string nazwalekarza)
         {
             Kartoteka kartoteka = Kartoteka.Instance;
 
             Pacjent pacjent = kartoteka.pacjenci.Where(x => x.Equals(imie, nazwisko)).FirstOrDefault();
-            if(pacjent == null)
+            if (pacjent == null)
             {
                 System.Console.WriteLine("Nie znaleziony: " + imie + " " + nazwisko);
                 pacjent = new Pacjent(imie, nazwisko);
@@ -28,7 +28,7 @@ namespace TOProjekt
 
 
             Lekarz lekarz = ZwrocKolekcjeLekarzy(ZwrocELekarza(nazwalekarza)).FirstOrDefault();
-            if(lekarz == null)
+            if (lekarz == null)
             {
                 System.Console.WriteLine("Brak danego lekarza");
                 return;
@@ -37,25 +37,25 @@ namespace TOProjekt
             {
                 System.Console.WriteLine("Obsluguje lekarza: " + lekarz.ToString());
             }
-            /*
-            wizytaTmp = WizytaFabryka.TworzWizyte();
-            wizytaTmp.SetPacjent(pacjent);
-            wizytaTmp.SetLekarz(lekarz);
-            wizytaTmp.SetDate(DateTime.Now);
 
-            Wizyta wizyta = wizytaTmp.Buduj();
-            */
-            Wizyta wizyta = new Wizyta(pacjent, lekarz, DateTime.Now.AddDays(0));
+            // Wizyta wizyta = new Wizyta(pacjent, lekarz, DateTime.Now.AddDays(0));
 
-            kartoteka.wizyty.Add(wizyta);
-            System.Console.WriteLine("Przygotowana wizyta: " + wizyta.ToString());
+            WizytaBuilder wb = new WizytaBuilder();
+            Wizyta wizyta2 = wb.
+                SetPacjent(pacjent).
+                SetLekarz(lekarz).
+                SetGodzina(DateTime.Now.AddDays(0)).
+                Build;
 
-            
+            kartoteka.wizyty.Add(wizyta2);
+            System.Console.WriteLine("Przygotowana wizyta: " + wizyta2.ToString());
+
+
         }
 
         private static IEnumerable<Lekarz> ZwrocKolekcjeLekarzy(ELekarz elekarz)
         {
-            switch(elekarz)
+            switch (elekarz)
             {
                 case ELekarz.DERMATOLOG:
                     return Kartoteka.Instance.dermatolodzy;

@@ -67,6 +67,7 @@
     <Compile Include="Pulmunolog.cs" />
     <Compile Include="Rejestracja.cs" />
     <Compile Include="Wizyta.cs" />
+    <Compile Include="WizytaBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

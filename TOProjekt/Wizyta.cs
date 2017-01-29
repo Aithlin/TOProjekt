@@ -11,13 +11,6 @@ namespace TOProjekt
         public DateTime godzina;
         public Pacjent pacjent;
         public Lekarz lekarz;
-        
-        public Wizyta(Pacjent pacjent,Lekarz lekarz, DateTime godzina)
-        {
-            this.pacjent = pacjent;
-            this.lekarz = lekarz;
-            this.godzina = godzina;
-        }
 
         public override String ToString()
         {
