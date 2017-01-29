@@ -17,6 +17,7 @@ namespace TOProjekt.Interfejs
                 case EKomenda.HELP: return new HelpK();
                 case EKomenda.REJESTRACJA: return new RejestracjaK(polecenie);
                 case EKomenda.WIZYTA: return new WizytaK(polecenie.ElementAtOrDefault(1), polecenie.ElementAtOrDefault(2), polecenie.ElementAtOrDefault(3));
+                case EKomenda.MOJEWIZYTY: return new MojeWizytyK(polecenie);
                 default: return new NicNieRobK();
             }
         }

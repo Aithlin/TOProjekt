@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfejs\Komendy\MojeWizytyK.cs" />
     <Compile Include="Model\Czlowiek.cs" />
     <Compile Include="Model\Lekarze\Dermatolog.cs" />
     <Compile Include="Model\ELekarz.cs" />

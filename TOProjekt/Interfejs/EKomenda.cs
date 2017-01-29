@@ -13,5 +13,6 @@ namespace TOProjekt.Interfejs
         HELP,
         REJESTRACJA,
         WIZYTA,
+        MOJEWIZYTY,
     }
 }

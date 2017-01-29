@@ -34,6 +34,33 @@ namespace TOProjekt
             System.Console.WriteLine("Dziekujemy za wizyte");
         }
 
+        public static void MojeWizyty(string imie, string nazwisko)
+        {
+            Kartoteka kartoteka = Kartoteka.Instance;
+            Pacjent pacjent = kartoteka.pacjenci.Where(x => x.Equals(imie, nazwisko)).FirstOrDefault();
+            if (pacjent == null)
+            {
+                System.Console.WriteLine("Nie ma Pan/Pani w kartotece.");
+                return;
+            }
+
+            IEnumerable<Wizyta> wizyty = kartoteka.wizyty.Where(x => x.pacjent == pacjent);
+            if (wizyty == null)
+            {
+                System.Console.WriteLine("Nie ma Pan/Pani zadnej wizyty");
+                return;
+            }
+            else
+            {
+                foreach (Wizyta wizyta in wizyty )
+                {
+                    Console.WriteLine(wizyta.ToString());
+                }
+            }
+
+
+        }
+
         private static ELekarz ZwrocELekarza(string elekarzstring)
         {
             ELekarz elekarz;
