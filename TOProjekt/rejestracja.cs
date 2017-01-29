@@ -40,7 +40,11 @@ namespace TOProjekt
 
             // Wizyta wizyta = new Wizyta(pacjent, lekarz, DateTime.Now.AddDays(0));
 
+            // deleguje tworzenie obiektu Wizyta do WizytaBuilder
             WizytaBuilder wb = new WizytaBuilder();
+
+            // wywoluje po kolei metody z Builder, przygotowujac obiekt wizyta. Na koncu za pomoca build zwracam sama wizyte
+            // dzieki temu ze metody WizytaBuilder zwracaja wb (return this), moge wszystko zrobic w jednym ciagu wywolan
             Wizyta wizyta2 = wb.
                 SetPacjent(pacjent).
                 SetLekarz(lekarz).
