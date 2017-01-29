@@ -19,7 +19,7 @@ namespace TOProjekt
 
         protected override void przygotowaniePacjenta(Pacjent pacjent)
         {
-
+            Console.WriteLine("Pacjent sie rozbiera i wykonuje głębokie wdechy");
         }
 
         protected override void badanie(Pacjent pacjent)
@@ -29,17 +29,22 @@ namespace TOProjekt
 
         protected override void prezentacjaWynikow()
         {
-
+            Console.WriteLine("Lekarz przedstawia wyniki badan i ewentualnie przepisuje leki");
         }
 
         protected override void zakonczenieWizyty()
         {
-
+            Console.WriteLine("Pacjent sie ubiera i wychodzi");
         }
 
         public override ELekarz typ()
         {
             return ELekarz.PULMUNOLOG;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString()+" Specjalizacja: Pulmunolog";
         }
     }
 }

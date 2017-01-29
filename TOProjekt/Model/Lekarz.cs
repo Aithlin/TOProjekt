@@ -32,7 +32,7 @@ namespace TOProjekt
         protected abstract void prezentacjaWynikow();
         public void uzupelnienieKartyPacjenta(Pacjent pacjent)
         {
-            Console.WriteLine("Wpisuje objawy pacjenta i ewentualne rozpoznanie choroby");
+            Console.WriteLine("Lekarz wpisuje objawy pacjenta i ewentualne rozpoznanie choroby do karty pacjenta");
         }
         protected abstract void zakonczenieWizyty();
 
@@ -40,5 +40,11 @@ namespace TOProjekt
 
 
         public abstract ELekarz typ();
+
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
