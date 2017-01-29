@@ -30,8 +30,7 @@ namespace TOProjekt
 
             System.Console.WriteLine("Prosze wejsc do pokoju, badz zaczekac na swoja kolej");
             pacjent.podaniedanych();
-            wizyta.lekarz.badaj(pacjent);
-            wizyta.lekarz.uzupelnijkartepacjenta(pacjent);
+            wizyta.lekarz.obslugaWizyty(pacjent);
             System.Console.WriteLine("Dziekujemy za wizyte");
         }
 
