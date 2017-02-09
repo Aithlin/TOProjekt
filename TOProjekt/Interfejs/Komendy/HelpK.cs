@@ -13,6 +13,7 @@ namespace TOProjekt.Interfejs.Komendy
             Console.WriteLine("Dostepne komendy:");
             Console.WriteLine("Rejestracja");
             Console.WriteLine("Wizyta");
+            Console.WriteLine("MojeWizyty");
             Console.WriteLine("Exit");
             return false;
         }

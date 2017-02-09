@@ -43,12 +43,28 @@ namespace TOProjekt
             // deleguje tworzenie obiektu Wizyta do WizytaBuilder
             WizytaBuilder wb = new WizytaBuilder();
 
+            //KAZDY LEKARZ PRZYJMUJE W GODZINACH OD 8 DO 13 
+            //czas przeznaczony na wizyte to godzina więc 5 wizyt/dzien
+            DateTime termWiz;
+            Wizyta wiz = kartoteka.wizyty.Where(x => x.lekarz == lekarz).LastOrDefault();
+            if (wiz == null)
+                termWiz = DateTime.Today.AddDays(1).AddHours(8);
+            else
+            {
+                if (wiz.godzina < DateTime.Today.AddDays(1))//sprawdzam czy ostatnia wizyta u lekarza jest o godzinie 12 (pacjent zostanie zapisany na kolejny wolny termin nastepnego dnia)
+                    termWiz = DateTime.Today.AddDays(1).AddHours(8);
+                else if (wiz.godzina.Hour == 12)
+                    termWiz = wiz.godzina.AddDays(1).Date.AddHours(8);//wyciagam date i dodaje 8 godzin od poczatku dnia
+                else
+                    termWiz = wiz.godzina.AddHours(1);
+            }
+                
             // wywoluje po kolei metody z Builder, przygotowujac obiekt wizyta. Na koncu za pomoca build zwracam sama wizyte
             // dzieki temu ze metody WizytaBuilder zwracaja wb (return this), moge wszystko zrobic w jednym ciagu wywolan
-            Wizyta wizyta2 = wb.
+             Wizyta wizyta2 = wb.
                 SetPacjent(pacjent).
                 SetLekarz(lekarz).
-                SetGodzina(DateTime.Now.AddDays(0)).
+                SetGodzina(termWiz).
                 Build;
 
             kartoteka.wizyty.Add(wizyta2);

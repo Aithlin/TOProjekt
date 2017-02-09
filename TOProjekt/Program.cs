@@ -45,9 +45,9 @@ namespace TOProjekt
 	    	    {
 				    Console.WriteLine("Funkcjonalnosc niezaimplementowana" + e.ToString());
 			    }
-                catch (Exception)
+                catch (Exception f)
                 {
-                    Console.WriteLine("Error w czytaniu komendy");
+                    Console.WriteLine("Error w czytaniu komendy"+ f.ToString());
                 }
             }
         }
